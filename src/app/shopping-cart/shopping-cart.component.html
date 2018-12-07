@@ -1,0 +1,18 @@
+<table class="shopping-cart">
+  <tr>
+    <th>Product</th>
+    <th>Quantity</th>
+    <th>Price</th>
+    <th>Total</th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let item of items">
+    <td> {{ item.product.name }}</td>
+    <td> {{ item.quantity }} </td>
+    <td class="price"> {{ item.price | currency }} </td>
+    <td> {{ item.totalPrice | currency }} </td>
+    <td><a class="delete" (click)="deleteFromCart(item)">
+        <mat-icon>delete</mat-icon>
+      </a></td>
+  </tr>
+</table>

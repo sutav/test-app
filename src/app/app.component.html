@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="basic-container">
+
+  <mat-card class="shopping-card">
+    <mat-card-title class="mat-card-title"><a href="" target="_blank">Socks Shop</a></mat-card-title>
+    <mat-card-subtitle class="mat-card-subtitle">Best place to buy your socks
+    </mat-card-subtitle>
+
+    <mat-card-content class="mat-card-content">
+      <div class="containerX">
+        <div fxLayout="row" fxLayout.sm="column" fxlayout.xs="column">
+          <div class="boxed-container catalog-container" >
+            <app-catalog (productAdded)="onProductAdded($event)"></app-catalog>
+          </div>
+          <div class="boxed-container catalog-container">
+            <app-shopping-cart #shoppingCart></app-shopping-cart>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+
+  </mat-card>
+</div>
+ 
+<router-outlet></router-outlet>

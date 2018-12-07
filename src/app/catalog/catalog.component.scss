@@ -1,0 +1,8 @@
+.catalog-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .catalog-container > * {
+    width: 100%;
+  }

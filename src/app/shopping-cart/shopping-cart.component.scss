@@ -1,0 +1,16 @@
+table.shopping-cart {
+    width: 100%;
+    padding: 5px 10px;
+    border-collapse: collapse;
+}
+table.shopping-cart th {
+    background: #673ab7;
+    color: #fff;
+}
+table.shopping-cart th, table.shopping-cart td {
+    border: 1px solid #AAAAAA;
+    padding: 3px 2px;
+}
+a.delete {
+    cursor: pointer;
+}

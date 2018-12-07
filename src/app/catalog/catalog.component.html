@@ -1,0 +1,20 @@
+<form [formGroup]="catalogForm">
+  <mat-form-field [formGroup]='catalogForm'>
+    <mat-select placeholder="Select Product" name="productId" [(value)]="selectedProductId" formControlName="productId">
+      <mat-option *ngFor="let p of products" [value]="p.id" (selectionChange)="onSelectionChange($event)">
+        {{p.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field [formGroup]='catalogForm'>
+    <input matInput placeholder="Quantity" type="number" min="1" name="quantity" formControlName="quantity">
+  </mat-form-field>
+
+  <mat-form-field [formGroup]='catalogForm'>
+    <input matInput placeholder="Price" name="price" formControlName="price">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="addProduct()">Add</button>
+
+</form>
