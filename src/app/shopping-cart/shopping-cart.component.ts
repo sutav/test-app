@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ShoppingCartItem } from './../shared/models/catalog.model';
 import * as _ from 'lodash';
 import { CatalogService } from '../shared/services/catalog.service';
@@ -7,7 +7,7 @@ import { CatalogService } from '../shared/services/catalog.service';
   templateUrl: './shopping-cart.component.html',
   styleUrls: ['./shopping-cart.component.scss']
 })
-export class ShoppingCartComponent implements OnInit {
+export class ShoppingCartComponent {
   shoppingCartColumns: string[] = ['name', 'quantity', 'price', 'totalPrice', 'delete'];
   items: ShoppingCartItem[];
   constructor(private catalogService: CatalogService) {
@@ -25,9 +25,6 @@ export class ShoppingCartComponent implements OnInit {
       this.items = updatedItems;
        //TODO: Notification of successful action required
     }, error => console.log('Could not add product.'));
-  }
-
-  ngOnInit() {
   }
 
 }
